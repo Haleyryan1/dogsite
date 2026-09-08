@@ -265,6 +265,89 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow);
 }
 
+/* ---------- Certification ---------- */
+.certification {
+  padding: 64px 0;
+  background: var(--cream-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.certification-inner {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.certification-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.certification-logo {
+  width: 130px;
+  height: auto;
+}
+
+.certification-tag {
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  background: rgba(92, 15, 31, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.certification-copy p:not(.eyebrow) {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  max-width: 640px;
+}
+
+.certification-list {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  max-width: 640px;
+}
+
+.certification-list li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.certification-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--burgundy);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ---------- Services ---------- */
 .services { padding: 88px 0; background: var(--white); }
 
@@ -472,10 +555,12 @@ a { color: inherit; text-decoration: none; }
    ========================================================= */
 @media (max-width: 920px) {
   .hero-inner,
-  .about-inner {
+  .about-inner,
+  .certification-inner {
     grid-template-columns: 1fr;
   }
   .about-media { order: -1; }
+  .certification-badge { max-width: 260px; margin: 0 auto; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .area-list { grid-template-columns: repeat(2, 1fr); }
 }
@@ -508,7 +593,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 480px) {
   .hero { padding: 44px 0 56px; }
-  .services, .about, .area, .contact { padding: 64px 0; }
+  .services, .about, .area, .contact, .certification { padding: 48px 0; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
 }
