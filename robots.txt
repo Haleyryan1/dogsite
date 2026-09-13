@@ -1,5 +1,5 @@
-# https://dogsite-theta.vercel.app/robots.txt
+# https://www.haleyspawsitivedogtraining.com/robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: https://dogsite-theta.vercel.app/sitemap.xml
+Sitemap: https://www.haleyspawsitivedogtraining.com/sitemap.xml
