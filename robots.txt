@@ -1,0 +1,5 @@
+# https://dogsite-theta.vercel.app/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://dogsite-theta.vercel.app/sitemap.xml

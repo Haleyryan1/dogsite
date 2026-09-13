@@ -34,7 +34,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto lets the CSS aspect-ratio win over the intrinsic width/height
+   attributes in the HTML (those are there to reserve space and stop layout shift) */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; text-decoration: none; }
 
